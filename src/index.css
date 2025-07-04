@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@theme {
+  --color-smalt-blue-50: #f2f9f9;
+  --color-smalt-blue-100: #deedef;
+  --color-smalt-blue-200: #c0dce1;
+  --color-smalt-blue-300: #95c3cb;
+  --color-smalt-blue-400: #62a2ae;
+  --color-smalt-blue-500: #45828f;
+  --color-smalt-blue-600: #3e6e7c;
+  --color-smalt-blue-700: #375c67;
+  --color-smalt-blue-800: #334d57;
+  --color-smalt-blue-900: #2e424b;
+  --color-smalt-blue-950: #1b2a31;
+  --text-10xl: 12.5rem;
+}
+
+@layer base {
+  :root {
+    --font-sans: 'Pixelify Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #ffff;
+  }
+}
+
+
