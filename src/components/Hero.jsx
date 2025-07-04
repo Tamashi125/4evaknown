@@ -17,7 +17,7 @@ const Hero = () => {
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 0.1 }}
-              className="text-white text-shadow-lg select-none text-[clamp(2rem,15vw,25rem)] leading-none"
+              className="text-white text-shadow-lg select-none text-[clamp(2rem,15vw,25rem)] leading-none px-30"
             >
               4eva
             </motion.div>
