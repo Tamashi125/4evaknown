@@ -7,26 +7,26 @@ import { FaFacebook, FaInstagram, FaTiktok, FaDiscord } from "react-icons/fa";
 // components
 
 const Social = () => {
-  const fadein1 = useAnimation();
-  const fadein2 = useAnimation();
-  const fadein3 = useAnimation();
-  const fadein4 = useAnimation();
+  // const fadein1 = useAnimation();
+  // const fadein2 = useAnimation();
+  // const fadein3 = useAnimation();
+  // const fadein4 = useAnimation();
 
-  useEffect(() => {
-    const startAnimation = async () => {
-      fadein1.set({ opacity: 0, y: 20 });
-      fadein2.set({ opacity: 0, y: 20 });
-      fadein3.set({ opacity: 0, y: 20 });
-      fadein4.set({ opacity: 0, y: 20 });
+  // useEffect(() => {
+  //   const startAnimation = async () => {
+  //     fadein1.set({ opacity: 0, y: 20 });
+  //     fadein2.set({ opacity: 0, y: 20 });
+  //     fadein3.set({ opacity: 0, y: 20 });
+  //     fadein4.set({ opacity: 0, y: 20 });
 
-      await fadein1.start({ opacity: 1, y: 0 });
-      await fadein2.start({ opacity: 1, y: 0 });
-      await fadein3.start({ opacity: 1, y: 0 });
-      await fadein4.start({ opacity: 1, y: 0 });
-    };
+  //     await fadein1.start({ opacity: 1, y: 0 });
+  //     await fadein2.start({ opacity: 1, y: 0 });
+  //     await fadein3.start({ opacity: 1, y: 0 });
+  //     await fadein4.start({ opacity: 1, y: 0 });
+  //   };
 
-    startAnimation();
-  }, []);
+  //   startAnimation();
+  // }, []);
 
   const Socialicon =
     "bg-smalt-blue-100 rounded-full w-[49px] h-[49px] flex items-center justify-center text-smalt-blue-500 max-sm:w-[29px] max-sm:h-[29px]";
