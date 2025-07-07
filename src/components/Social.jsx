@@ -1,5 +1,6 @@
 // framer motion
-import { motion, useAnimation } from "framer-motion";
+import { delay, motion, stagger, useAnimation } from "framer-motion";
+import { a, div } from "motion/react-client";
 // react
 import { useEffect, useRef, useState } from "react";
 // react icons
@@ -30,40 +31,50 @@ const Social = () => {
 
   const Socialicon =
     "bg-smalt-blue-100 rounded-full w-[49px] h-[49px] flex items-center justify-center text-smalt-blue-500 max-sm:w-[29px] max-sm:h-[29px]";
+
+  const icon = [
+    {
+      id: "1",
+      icon: <FaDiscord />,
+      link: "https://discord.gg/QxfUpM4kF8",
+      delay: "0.6",
+    },
+    {
+      id: "2",
+      icon: <FaFacebook />,
+      link: "https://www.facebook.com/wuttipong.leeprakhon.2025",
+      delay: "1",
+    },
+    {
+      id: "3",
+      icon: <FaInstagram />,
+      link: "https://www.instagram.com/__wuttipongg__/",
+      delay: "1.4",
+    },
+    {
+      id: "4",
+      icon: <FaDiscord />,
+      link: "https://www.tiktok.com/@xiiiivvi",
+      delay: "2",
+    },
+  ];
+
   return (
     <>
       <div className="flex flex-row-reverse gap-5">
-        <motion.div animate={fadein1} className={Socialicon}>
-          <a href="https://discord.gg/QxfUpM4kF8" target="_blank">
-            <div className="transition-all hover:scale-150">
-              <FaDiscord />
-            </div>
-          </a>
-        </motion.div>
-        <motion.div animate={fadein2} className={Socialicon}>
-          <a
-            href="https://www.facebook.com/wuttipong.leeprakhon.2025"
-            target="_blank"
+        {icon.map((items) => (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: items.delay }}
+            key={items.id}
+            className={Socialicon}
           >
-            <div className="transition-all hover:scale-150">
-              <FaFacebook />
-            </div>
-          </a>
-        </motion.div>
-        <motion.div animate={fadein3} className={Socialicon}>
-          <a href="https://www.instagram.com/__wuttipongg__/" target="_blank">
-            <div className="transition-all hover:scale-150">
-              <FaInstagram />
-            </div>
-          </a>
-        </motion.div>
-        <motion.div animate={fadein4} className={Socialicon}>
-          <a href="https://www.tiktok.com/@xiiiivvi" target="_blank">
-            <div className="hover:scale-150 transition-all">
-              <FaTiktok />
-            </div>
-          </a>
-        </motion.div>
+            <a href={items.link} target="_blank">
+              <div className="transition-all hover:scale-150">{items.icon}</div>
+            </a>
+          </motion.div>
+        ))}
       </div>
     </>
   );
