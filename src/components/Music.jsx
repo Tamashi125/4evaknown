@@ -4,7 +4,6 @@ import { useRef, useState, useEffect } from "react";
 import { FaPlay, FaPause } from "react-icons/fa";
 // framer motion
 import { motion, useAnimation } from "framer-motion";
-import { div } from "motion/react-client";
 
 const Music = () => {
   const audioRef = useRef(null);
@@ -48,21 +47,6 @@ const Music = () => {
   const icon = playing ? <FaPause /> : <FaPlay />;
 
   const volumePercentage = volume * 100;
-
-  // const fadein1 = useAnimation();
-  // const fadein2 = useAnimation();
-
-  // useEffect(() => {
-  //   const startAnimation = async () => {
-  //     fadein1.set({ opacity: 0, y: 20 });
-  //     fadein2.set({ opacity: 0, y: 20 });
-
-  //     await fadein1.start({ opacity: 1, y: 0 });
-  //     await fadein2.start({ opacity: 1, y: 0 });
-  //   };
-
-  //   startAnimation();
-  // }, []);
 
   const itemicon = [
     {
