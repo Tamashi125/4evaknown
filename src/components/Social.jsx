@@ -37,7 +37,7 @@ const Social = () => {
       id: "1",
       icon: <FaDiscord />,
       link: "https://discord.gg/QxfUpM4kF8",
-      delay: "20",
+      delay: "0.6",
     },
     {
       id: "2",
